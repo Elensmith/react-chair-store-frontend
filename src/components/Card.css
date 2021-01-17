@@ -1,0 +1,42 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 260px;
+  max-height: 390px;
+  align-items: center;
+}
+
+.card__button {
+  width: 125px;
+  height: 35px;
+  color: white;
+  background-color: crimson;
+  border: none;
+  cursor: pointer;
+  border-radius: 16px;
+  outline: none;
+}
+
+.card__button:hover {
+  background-color: red;
+}
+
+.card__image {
+  width: fit-content;
+}
+
+.card__price {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.card__price-symbol {
+  padding-left: 3px;
+}
+
+.card__title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+}
