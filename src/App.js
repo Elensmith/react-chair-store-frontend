@@ -50,12 +50,16 @@ function App() {
 
       const templateParams = {name: values.name, email: values.email, phone: values.phone, item: values.clickedItem}
 
-      emailjs.send('gmail', 'template_id', templateParams, 'user_id')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
+      // вариант для гитхаб
+      alert("Эти данныe уйдут на почту: Имя: " + templateParams.name + " Email: " + templateParams.email + " Телефон: " + templateParams.phone + " Название товара: " + templateParams.item);
+
+      // отправка данных на почту
+      // emailjs.send('gmail', 'template_id', templateParams, 'user_id')
+      // .then((result) => {
+      //     console.log(result.text);
+      // }, (error) => {
+      //     console.log(error.text);
+      // });
       setIsPopupOpen(false);
     }
   }

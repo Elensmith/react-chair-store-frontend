@@ -1,5 +1,9 @@
 ## CHAIR STORE
 
+### Проект на gh-pages:
+
+https://elensmith.github.io/react-chair-store-frontend/
+
 ### Функционал:
 
 - при клике "Купить" открывается модальное окно, с полями: Имя, Телефон, Email, Название выбранного товара
