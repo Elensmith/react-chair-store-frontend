@@ -2,7 +2,7 @@
 
 ### Проект на gh-pages:
 
-https://elensmith.github.io/react-chair-store-frontend/
+https://elensmith.github.io/react-chair-store-frontend/ (пока не работает)
 
 ### Функционал:
 
