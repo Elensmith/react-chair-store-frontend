@@ -100,7 +100,7 @@ function App() {
 
   function closePopup() {
     setIsPopupOpen(false);
-    setValues({
+    setErrors({
       nameError: null,
       emailError: null,
       phoneError: null
