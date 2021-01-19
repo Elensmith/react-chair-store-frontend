@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/react-chair-store-frontend/static/css/main.08d362ca.chunk.css",
-    "main.js": "/react-chair-store-frontend/static/js/main.53f1ce63.chunk.js",
-    "main.js.map": "/react-chair-store-frontend/static/js/main.53f1ce63.chunk.js.map",
+    "main.css": "/react-chair-store-frontend/static/css/main.98d56141.chunk.css",
+    "main.js": "/react-chair-store-frontend/static/js/main.a1f44132.chunk.js",
+    "main.js.map": "/react-chair-store-frontend/static/js/main.a1f44132.chunk.js.map",
     "runtime-main.js": "/react-chair-store-frontend/static/js/runtime-main.df4959d5.js",
     "runtime-main.js.map": "/react-chair-store-frontend/static/js/runtime-main.df4959d5.js.map",
-    "static/js/2.03dd83fa.chunk.js": "/react-chair-store-frontend/static/js/2.03dd83fa.chunk.js",
-    "static/js/2.03dd83fa.chunk.js.map": "/react-chair-store-frontend/static/js/2.03dd83fa.chunk.js.map",
+    "static/js/2.8c38d153.chunk.js": "/react-chair-store-frontend/static/js/2.8c38d153.chunk.js",
+    "static/js/2.8c38d153.chunk.js.map": "/react-chair-store-frontend/static/js/2.8c38d153.chunk.js.map",
     "static/js/3.5a4e6b8d.chunk.js": "/react-chair-store-frontend/static/js/3.5a4e6b8d.chunk.js",
     "static/js/3.5a4e6b8d.chunk.js.map": "/react-chair-store-frontend/static/js/3.5a4e6b8d.chunk.js.map",
     "index.html": "/react-chair-store-frontend/index.html",
-    "static/css/main.08d362ca.chunk.css.map": "/react-chair-store-frontend/static/css/main.08d362ca.chunk.css.map",
-    "static/js/2.03dd83fa.chunk.js.LICENSE.txt": "/react-chair-store-frontend/static/js/2.03dd83fa.chunk.js.LICENSE.txt",
+    "static/css/main.98d56141.chunk.css.map": "/react-chair-store-frontend/static/css/main.98d56141.chunk.css.map",
+    "static/js/2.8c38d153.chunk.js.LICENSE.txt": "/react-chair-store-frontend/static/js/2.8c38d153.chunk.js.LICENSE.txt",
     "static/media/close-white.e4e5d624.svg": "/react-chair-store-frontend/static/media/close-white.e4e5d624.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.df4959d5.js",
-    "static/js/2.03dd83fa.chunk.js",
-    "static/css/main.08d362ca.chunk.css",
-    "static/js/main.53f1ce63.chunk.js"
+    "static/js/2.8c38d153.chunk.js",
+    "static/css/main.98d56141.chunk.css",
+    "static/js/main.a1f44132.chunk.js"
   ]
 }
