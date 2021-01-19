@@ -10,46 +10,43 @@ function App() {
   const [cards, setCards] = React.useState([]);
   const [isPopupOpen, setIsPopupOpen] = React.useState(false);
   const [values, setValues] = React.useState({
-    name: "",
-    email: "",
-    phone: "",
-    clickedItem: ""
+    name: null,
+    email: null,
+    phone: null,
+    clickedItem: null
   });
   const [errors, setErrors] = React.useState({
-    nameError: null,
-    emailError: null,
-    phoneError: null
+    nameError: "",
+    emailError: "",
+    phoneError: "",
   });
 
   const nameRegex = RegExp(/[A-Za-zА-Яа-я]{2,20}/);
   const emailRegex = RegExp(/^([a-zA-Z0-9]+[-_.]*[a-zA-Z0-9]+|[a-zA-Z0-9]+)@[-a-zA-Z0-9]+[.][a-zA-Z.]{2,}$/);
   const phoneRegex = RegExp(/^[+]?[\d]([(][\d]{3}[)][\s]?[\d]{3}[-][\d]{2}[-][\d]{2}|[\d]{10}|[\s]([\d]{3}[-])+[\d]{2}[-][\d]{2})/);
   
+  function formValid(errors) {
+    let valid = false;
+
+    Object.values(errors).forEach((val) => {
+      if (val.length > 1 || val === "") {
+        valid = false;
+        return valid;
+      } else if(val.length === 1) {
+      valid = true;
+      return valid;
+      }
+    });
+
+    return valid;
+  };
+
   function handleSubmit(e) {
     e.preventDefault();
 
-    let empty = false;
-
-    if (values.name === undefined) {
-      setErrors({nameError:"Заполните это поле"});
-      empty = true;
-      return empty;
-    } 
-    if (values.email === undefined) {
-      setErrors({emailError:"Заполните это поле"});
-      empty = true;
-      return empty;
-    }
-    if (values.phone === undefined) {
-      setErrors({phoneError:"Заполните это поле"});
-      empty = true;
-      return empty;
-    }
-
-    if ((errors.nameError === undefined || errors.nameError === null) && (errors.emailError === undefined || errors.emailError === null) && (errors.phoneError === undefined || errors.phoneError === null) && !empty) {
-
+    if (formValid(errors)) {
       const templateParams = {name: values.name, email: values.email, phone: values.phone, item: values.clickedItem}
-
+ 
       // вариант для гитхаб
       alert("Эти данныe уйдут на почту: Имя: " + templateParams.name + " Email: " + templateParams.email + " Телефон: " + templateParams.phone + " Название товара: " + templateParams.item);
 
@@ -62,10 +59,11 @@ function App() {
       // });
       setIsPopupOpen(false);
     }
+
   }
 
   function handleInputChange(e) {
-    const { name, value } = e;
+    const { name, value } = e.target;
     setValues({
       ...values,
       [name]: value
@@ -74,24 +72,26 @@ function App() {
 
     switch (name) {
       case "name":
-        nameRegex.test(value) && value.length > 0 
-        ?  setErrors({nameError:null})
-        :  setErrors({nameError:"Введите имя от 2 до 20 символов"});
-        break;
-      case "email":
-        emailRegex.test(value) && value.length > 0 
-        ?  setErrors({emailError:null})
-        :  setErrors({emailError:"Введите корректный email"});
+        nameRegex.test(value)
+        ?  setErrors({...errors, nameError: "."})
+        :  setErrors({...errors, nameError:"Введите имя от 2 до 20 символов"});
         break;
       case "phone":
-        phoneRegex.test(value) && value.length > 0 
-      ?  setErrors({phoneError:null})
-      :  setErrors({phoneError:"Введите номер телефона"});
+        phoneRegex.test(value) 
+      ?  setErrors({...errors, phoneError: "."})
+      :  setErrors({...errors, phoneError:"Введите корректный номер телефона"});
+        break;
+      case "email":
+        emailRegex.test(value) 
+        ?  setErrors({...errors, emailError: "."})
+        :  setErrors({...errors, emailError:"Введите корректный email"});
         break;
       default:
         break;
     }
   }
+
+
 
   function handlerCardButtonClick(e) {
     setValues({clickedItem: e.target.parentNode.childNodes[1].innerText})
@@ -101,9 +101,9 @@ function App() {
   function closePopup() {
     setIsPopupOpen(false);
     setErrors({
-      nameError: null,
-      emailError: null,
-      phoneError: null
+      nameError: "",
+      emailError: "",
+      phoneError: ""
     });
   }
 
